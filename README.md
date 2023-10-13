@@ -6,7 +6,7 @@ The _printf function is a versatile function that facilitates formatted output o
 
 ## Usage
 
-The general syntax of this printf function is given as follows:
+The general syntax of this _printf function is given as follows:
  - int _printf(const char* format, ...);
 The format string contains placeholders, known as format specifiers, which are replaced with the actual values during execution and also it can contain plain text. The function write output to the standard output stream and returns the number of characters printed except the null byte used to end output to strings.
 
