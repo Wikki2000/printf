@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 	int i, j, count = 0;
 
 	va_start(args, format);
-
 	/* Iterate through the first character till a null character ('\0') is encouner */
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -28,7 +27,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			count++;
 		}
-
 		else
 		{
 			i++; /* Move pass the % operator */
@@ -41,19 +39,16 @@ int _printf(const char *format, ...)
 					_putchar(c);
 					count++;
 					break;
-
 				case 's':
 					str = va_arg(args, const char *);
 					for (j = 0; str[j] != '\0'; j++);
 					_putchar(str[j]);
 					count++;
 					break;
-
 				case '%':
 					_putchar('%');
 					count++;
-					break;
-					
+					break;	
 				default:
 					_putchar('%');
 					_putchar(format[i]);
@@ -62,8 +57,6 @@ int _printf(const char *format, ...)
 			}
 		}
 	}
-
 	va_end(args);
-
 	return (count);
 }
