@@ -11,19 +11,25 @@
  */
 int  print_binary(unsigned int decimal)
 {
-	int count = 0;
-	int bit;
-	int binary[7];
+	int num2 = decimal, count = 0, rem = 0, len = 0;
+	char *ptr;
 
-
-	for (bit = 6; bit >= 0; bit--)
+	while (num2 > 0)
 	{
-		binary[bit] = (decimal & 1);
-		decimal >>= 1;
+		num2 /= 2;
+		len++;
 	}
-
-	for (bit = 0; bit < 7; bit++)
-		count += _putchar(binary[bit] + '0');
-
+	count = len;
+	len -= 1;
+	ptr = malloc(count);
+	while (num > 0)
+	{
+		rem = num % 2;
+		num /= 2;
+		ptr[len] = '0' + rem;
+		len--;
+	}
+	write(1, ptr, count);
+	free(ptr);
 	return (count);
 }
