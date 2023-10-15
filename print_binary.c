@@ -11,7 +11,7 @@
  */
 int  print_binary(unsigned int decimal)
 {
-	int num2 = decimal, count = 0, rem = 0, len = 0;
+	unsigned int num2 = decimal, count = 0, rem = 0, len = 0;
 	char *ptr;
 
 	while (num2 > 0)
