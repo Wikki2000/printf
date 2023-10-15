@@ -11,7 +11,7 @@
  */
 unsigned int  print_binary(unsigned int decimal)
 {
-	unsigned int count = 0;
+	int count = 0;
 	int bit;
 	int binary[7];
 
