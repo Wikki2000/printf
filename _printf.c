@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list ls;
-	unsigned int i = 0, count = 0;
+	int i = 0, count = 0;
 
 	va_start(ls, format);
 	if (format == NULL)
@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_decimal(va_arg(ls, int));
 			else if (format[i] == 'b')
-				count += print_binary(va_arg(ls, unsigned));
+				count += print_binary(va_arg(ls, unsigned int));
 			else
 			{
 				count += print_character('%');
