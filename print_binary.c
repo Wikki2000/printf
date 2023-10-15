@@ -11,25 +11,23 @@
  */
 int  print_binary(unsigned int decimal)
 {
-	unsigned int num2 = decimal, count = 0, rem = 0, len = 0;
-	char *ptr;
+	unsigned int i, j, binary[32];
 
-	while (num2 > 0)
+	if (num == 0)
 	{
-		num2 /= 2;
-		len++;
+		_putchar('0');
+		return (1);
 	}
-	count = len;
-	len -= 1;
-	ptr = malloc(count);
-	while (decimal > 0)
+
+	while (num > 0)
 	{
-		rem = decimal % 2;
-		decimal /= 2;
-		ptr[len] = '0' + rem;
-		len--;
+		binary[i] = num % 2;
+		num /= 2;
+		i++;
 	}
-	write(1, ptr, count);
-	free(ptr);
-	return (count);
+
+	/* Print remainder in reverse order which is it binary rep */
+	for (j = i - 1; j > 0; j--)
+		_putchar(binary[i] + '0');
+	return (i);
 }
