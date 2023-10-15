@@ -11,23 +11,22 @@
  */
 int  print_binary(unsigned int decimal)
 {
-	unsigned int i, j, binary[32];
+	int count = 0;
 
-	if (num == 0)
+	if (decimal < 0)
+		return (-1);
+	if (decimal == 0)
 	{
-		_putchar('0');
+		putchar('0');
 		return (1);
 	}
-
-	while (num > 0)
+	if (decimal == 1)
 	{
-		binary[i] = num % 2;
-		num /= 2;
-		i++;
+		putchar('1');
+		return (1);
 	}
-
-	/* Print remainder in reverse order which is it binary rep */
-	for (j = i - 1; j > 0; j--)
-		_putchar(binary[i] + '0');
-	return (i);
+	if (decimal > 1)
+		count = 1 + print_binary(decimal / 2);
+	putchar('0' + (decimal % 2));
+	return (count);
 }
