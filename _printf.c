@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			else if (format[i] == 'd' || format[i] == 'i')
 				count += print_decimal(va_arg(ls, int));
 			else if (format[i] == 'b')
-				count += print_binary(va_arg(ls, unsigned int));
+				count += print_binary(va_arg(ls, unsigned));
 			else
 			{
 				count += print_character('%');
