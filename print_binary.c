@@ -9,9 +9,9 @@
  *
  * Return: The count of printed character
  */
-unsigned print_binary(unsigned int decimal)
+unsigned int  print_binary(unsigned int decimal)
 {
-	int count = 0;
+	unsigned int count = 0;
 	int bit;
 	int binary[7];
 
