@@ -1,23 +1,6 @@
 #include "main.h"
 
 /**
- * print_string  - count the length of a string
- * @str: a string
- * Return: length of string
- */
-int print_string(char *str)
-{
-	int len = 0;
-
-	while (str[len] != '\0')
-	{
-		_putchar(str[len]);
-		len++;
-	}
-	return (len);
-}
-
-/**
  * _printf - print formatted output to standard output
  * @format: a string containing format specifiers and plain text
  *  Return: number of characters printed except null character
@@ -61,6 +44,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
+
 	va_end(ls);
 	return (count);
 }
