@@ -13,8 +13,6 @@ int  print_binary(unsigned int decimal)
 {
 	int count = 0;
 
-	if (decimal < 0)
-		return (-1);
 	if (decimal == 0)
 	{
 		putchar('0');
