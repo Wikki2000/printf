@@ -22,10 +22,10 @@ int  print_binary(unsigned int decimal)
 	count = len;
 	len -= 1;
 	ptr = malloc(count);
-	while (num > 0)
+	while (decimal > 0)
 	{
-		rem = num % 2;
-		num /= 2;
+		rem = decimal % 2;
+		decimal /= 2;
 		ptr[len] = '0' + rem;
 		len--;
 	}
