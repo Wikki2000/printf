@@ -27,7 +27,7 @@ int print_decimal(int num)
 		temp /= 10;
 	}
 	count += len;
-	ptr = malloc(len);
+	ptr = (char *) malloc(len);
 	if (ptr == NULL)
 		return (-1);
 	l = len;
