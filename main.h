@@ -11,5 +11,7 @@ int print_character(char c);
 int print_string(char *str);
 int print_binary(unsigned int decimal);
 int print_decimal(int num);
+int print_octal(unsigned int num);
+int print_unsigned(unsigned int num);
 
 #endif
