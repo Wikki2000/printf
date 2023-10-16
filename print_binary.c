@@ -9,21 +9,22 @@
  *
  * Return: The count of printed character
  */
-unsigned int  print_binary(unsigned int decimal)
+int  print_binary(unsigned int decimal)
 {
-	unsigned int count = 0;
-	int bit;
-	int binary[7];
+	int count = 0;
 
-
-	for (bit = 6; bit >= 0; bit--)
+	if (decimal == 0)
 	{
-		binary[bit] = (decimal & 1);
-		decimal >>= 1;
+		putchar('0');
+		return (1);
 	}
-
-	for (bit = 0; bit < 7; bit++)
-		count += _putchar(binary[bit] + '0');
-
+	if (decimal == 1)
+	{
+		putchar('1');
+		return (1);
+	}
+	if (decimal > 1)
+		count = 1 + print_binary(decimal / 2);
+	putchar('0' + (decimal % 2));
 	return (count);
 }
