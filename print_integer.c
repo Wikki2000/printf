@@ -20,9 +20,8 @@ int print_decimal(int num)
 		return (1);
 	}
 	else if (num / 10 != 0)
-		count += print_decimal(num / 10);
+		count = 1 +  print_decimal(num / 10);
 	_putchar('0' + (num % 10));
-	count++;
 
 	return (count);
 }
