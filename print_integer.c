@@ -14,8 +14,12 @@ int print_decimal(int num)
 		count++;
 		num = (-num);
 	}
-
-	if (num / 10 != 0)
+	if (num == 0)
+	{
+		putchar('0');
+		return (1);
+	}
+	else if (num / 10 != 0)
 		count += print_decimal(num / 10);
 	_putchar('0' + (num % 10));
 	count++;
