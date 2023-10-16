@@ -9,19 +9,19 @@
 int print_hexadecimal(int decimal)
 {
 	int rem, count = 0;
-	char hex_digit;
+	char hex_digit[] = "0123456789abcdef";
 
-	rem = decimal % 16;
-	(rem < 0) ? (hex_digit = rem + '0') : (hex_digit = rem - 10 + 'a');
-
-	/* Base condition for recursive call */
-	if (decimal == 0)
-		return (0);
-
-	/* Recursively calling the function */
+	if (decimal <= 15)
+	{
+		_putchar(hex_digit[decimal]);
+		return (1);
+	}
 	else
+	{
 		count = 1 + print_hexadecimal(decimal / 16);
-	_putchar(hex_digit);
+		rem = decimal / 16;
+		_putchar(hex_digit[rem]);
+	}
 
 	return (count);
 }
@@ -35,16 +35,20 @@ int print_hexadecimal(int decimal)
 int print_HEXADECIMAL(int decimal)
 {
 	int rem, count = 0;
-	char hex_digit;
+	char *hex_digit = "0123456789ABCDEF";
 
-	rem = decimal % 16;
-	(rem < 0) ? (hex_digit = rem + '0') : (hex_digit = rem - 10 + 'A');
-
-	if (decimal == 0)
-		return (0);
+	if (decimal <= 15)
+	{
+		_putchar(*(hex_digit + decimal));
+		return (1);
+	}
 
 	else
-		count = 1 + print_HEXADECIMAL(decimal / 16);
-	_putchar(hex_digit);
+	{
+		count = 1 + print_hexadecimal(decimal / 16);
+		rem = decimal / 16;
+		_putchar(*(hex_digit + rem));
+	}
+
 	return (count);
 }
