@@ -18,11 +18,6 @@ int print_non_printable(char *str)
 		{
 			_putchar('\\');
 			_putchar('x');
-			if (str[i] <= 15)
-			{
-				putchar('0');
-				count++;
-			}
 			count += print_HEXADECIMAL(str[i]);
 		}
 		else
