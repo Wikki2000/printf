@@ -37,6 +37,10 @@ int _printf(const char *format, ...)
 				count += print_hexadecimal(va_arg(ls, int));
 			else if (format[i] == 'X')
 				count += print_HEXADECIMAL(va_arg(ls, int));
+			else if (format[i] == 'u')
+				count += print_unsigned(va_arg(ls, unsigned int));
+			else if (format[i] == 'o')
+				count += print_octal(va_arg(ls, unsigned int));
 			else
 			{
 				count += print_character('%');
