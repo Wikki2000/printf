@@ -5,7 +5,7 @@
  * @c: a charcter
  * Return: number of character
  */
-int print_unsigned_and_octal(unsigned int num, char c)
+int print_handle(unsigned int num, char c)
 {
 	if (c == 'u')
 		return (print_unsigned(num));
