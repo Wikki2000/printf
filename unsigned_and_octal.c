@@ -7,36 +7,17 @@
  */
 int print_unsigned(unsigned int num)
 {
-	unsigned int count = 0, rev = 0, rem = 0, len = 0;
+	int count = 0;
 
 	if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return (1);
 	}
-	while (num > 0)
-	{
-		rem = num % 10;
-		num /= 10;
-		rev = rev * 10 + rem;
-		count++;
-	}
-	len = count;
-	while (rev > 0)
-	{
-		rem = rev % 10;
-		rev /= 10;
-		putchar('0' + rem);
-		len--;
-	}
-	if (len > 0)
-	{
-		while (len > 0)
-		{
-			putchar('0');
-			len--;
-		}
-	}
+	else if (num / 10 != 0)
+		count +=  print_unsigned(num / 10);
+	_putchar('0' + (num % 10));
+	count++;
 	return (count);
 }
 
