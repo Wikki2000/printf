@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				format[i] == 'x' || format[i] == 'X')
 				count += print_handle(va_arg(ls, unsigned int), format[i]);
 			else if (format[i] == 'r')
-				count += print_reverse(va_arg(ls, char *);
+				count += print_reverse(va_arg(ls, char *));
 			else
 			{
 				count += print_character('%');
