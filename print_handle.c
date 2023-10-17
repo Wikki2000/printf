@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  * print_handle - print unsigned, octal and hexadecimal
  * @num: an unsigned number
  * @c: a charcter
  * Return: number of character
  */
+
 int print_handle(unsigned int num, char c)
 {
 	int count = 0;
