@@ -11,12 +11,12 @@ int print_unsigned(unsigned int num)
 
 	if (num == 0)
 	{
-		putchar('0');
+		_putchar('0');
 		return (1);
 	}
 	else if (num / 10 != 0)
 		count +=  print_unsigned(num / 10);
-	putchar('0' + (num % 10));
+	_putchar('0' + (num % 10));
 	count++;
 	return (count);
 }
