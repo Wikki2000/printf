@@ -7,14 +7,15 @@
  */
 int print_handle(unsigned int num, char c)
 {
+	int count = 0;
+
 	if (c == 'u')
-		return (print_unsigned(num));
+		count = 1 + (print_unsigned(num));
 	else if (c == 'o')
-		return (print_octal(num));
+		count = 1 + (print_octal(num));
 	else if (c == 'X')
-		return (print_HEXADECIMAL(num));
+		count = 1 + (print_HEXADECIMAL(num));
 	else if (c == 'x')
-		return (print_hexadecimal(num));
-	else
-		return (-1);
+		count = 1 + (print_hexadecimal(num));
+	return (count);
 }
