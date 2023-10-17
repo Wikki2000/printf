@@ -16,5 +16,6 @@ int print_unsigned(unsigned int num);
 int print_hexadecimal(unsigned int decimal);
 int print_HEXADECIMAL(unsigned int decimal);
 int print_handle(unsigned int num, char c);
+int print_non_printable(char *str);
 
 #endif
