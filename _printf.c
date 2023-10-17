@@ -33,6 +33,9 @@ int _printf(const char *format, ...)
 				count += print_decimal(va_arg(ls, int));
 			else if (format[i] == 'b')
 				count += print_binary(va_arg(ls, unsigned int));
+			else if (format[i] == 'u' || format[i] == 'o' ||
+				format[i] == 'x' || format[i] == 'X')
+				count += print_handle(va_arg(ls, unsigned int), format[i]);
 			else
 			{
 				count += print_character('%');
