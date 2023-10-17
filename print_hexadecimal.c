@@ -6,7 +6,7 @@
  *
  * Return: The count of the printed characters
  */
-int print_hexadecimal(int decimal)
+int print_hexadecimal(unsigned int decimal)
 {
 	int rem, count = 0;
 	char hex_digit[] = "0123456789abcdef";
@@ -19,7 +19,7 @@ int print_hexadecimal(int decimal)
 	else
 	{
 		count = 1 + print_hexadecimal(decimal / 16);
-		rem = decimal / 16;
+		rem = decimal % 16;
 		_putchar(hex_digit[rem]);
 	}
 
@@ -32,7 +32,7 @@ int print_hexadecimal(int decimal)
  *
  * Return: The count of the printed characters
  */
-int print_HEXADECIMAL(int decimal)
+int print_HEXADECIMAL(unsigned int decimal)
 {
 	int rem, count = 0;
 	char *hex_digit = "0123456789ABCDEF";
@@ -46,7 +46,7 @@ int print_HEXADECIMAL(int decimal)
 	else
 	{
 		count = 1 + print_hexadecimal(decimal / 16);
-		rem = decimal / 16;
+		rem = decimal % 16;
 		_putchar(*(hex_digit + rem));
 	}
 
