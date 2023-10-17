@@ -10,6 +10,9 @@ int print_reverse(char *str)
 {
 	int len, i, count = 0;
 
+	if (str == NULL)
+		return (0);
+
 	len = _strlen(str);
 
 	for (i = len - 1; i >= 0; i++)
