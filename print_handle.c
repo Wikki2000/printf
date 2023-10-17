@@ -9,15 +9,12 @@
 
 int print_handle(unsigned int num, char c)
 {
-	int count = 0;
-
 	if (c == 'u')
-		count = 1 + (print_unsigned(num));
+		return (print_unsigned(num));
 	else if (c == 'o')
-		count = 1 + (print_octal(num));
+		return (print_octal(num));
 	else if (c == 'X')
-		count = 1 + (print_HEXADECIMAL(num));
+		return (print_HEXADECIMAL(num));
 	else if (c == 'x')
-		count = 1 + (print_hexadecimal(num));
-	return (count);
+		return (print_hexadecimal(num));
 }
