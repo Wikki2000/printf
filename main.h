@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-11;rgb:0000/0000/0000#include <stdarg.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
