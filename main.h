@@ -15,5 +15,6 @@ int print_octal(unsigned int num);
 int print_unsigned(unsigned int num);
 int print_hexadecimal(int decimal);
 int print_HEXADECIMAL(int decimal);
+int print_unsigned_and_octal(unsigned int num, char c);
 
 #endif
