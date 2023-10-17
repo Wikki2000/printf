@@ -15,6 +15,5 @@ int print_handle(unsigned int num, char c)
 		return (print_HEXADECIMAL(num));
 	else if (c == 'x')
 		return (print_hexadecimal(num));
-	else
-		return (-1);
+	return (-1);
 }
