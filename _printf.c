@@ -42,6 +42,13 @@ int _printf(const char *format, ...)
 				count += print_reverse(va_arg(ls, char *));
 			else if (format[i] == 'p')
 				count += print_adress(va_arg(ls, void *));
+
+			else if (format[i] == '+' && (format[i + 1] == 'i' || format[i + 1] == 'd'))
+			{
+				_putchar('+');
+				i++;
+				count += print_decimal(va_arg(ls, int));
+			}
 			else
 			{
 				count += print_character('%');
