@@ -40,6 +40,8 @@ int _printf(const char *format, ...)
 				count += print_handle(va_arg(ls, unsigned int), format[i]);
 			else if (format[i] == 'r')
 				count += print_reverse(va_arg(ls, char *));
+			else if (format[i] == 'p')
+				count += print_adress(va_arg(ls, void *));
 			else
 			{
 				count += print_character('%');

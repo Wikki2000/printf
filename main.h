@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdint.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -19,5 +20,6 @@ int print_handle(unsigned int num, char c);
 int print_non_printable(char *str);
 int _strlen(char *str);
 int print_reverse(char *str);
+int print_adress(void *ptr);
 
 #endif
