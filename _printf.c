@@ -49,6 +49,12 @@ int _printf(const char *format, ...)
 				i++;
 				count += print_decimal(va_arg(ls, int));
 			}
+			else if (format[i] == ' ' && (format[i + 1] == 'i' || format[i + 1] == 'd'))
+			{
+				_putchar(' ');
+				i++;
+				count += print_decimal(va_arg(ls, int));
+			}
 			else
 			{
 				count += print_character('%');
