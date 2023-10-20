@@ -26,7 +26,7 @@ int rot13(char *str)
 		}
 		if (flag == 0)
 		{
-			_putchar(enc_2[i]);
+			_putchar(str[i]);
 			count++;
 		}
 		i++;
