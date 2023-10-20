@@ -23,11 +23,11 @@ int rot13(char *str)
 				count++;
 				flag = 1;
 			}
-			if (flag == 0)
-			{
-				_putchar(enc_2[i]);
-				count++;
-			}
+		}
+		if (flag == 0)
+		{
+			_putchar(enc_2[i]);
+			count++;
 		}
 		i++;
 	}
