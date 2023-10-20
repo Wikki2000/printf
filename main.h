@@ -21,5 +21,6 @@ int print_non_printable(char *str);
 int _strlen(char *str);
 int print_reverse(char *str);
 int print_adress(void *ptr);
+int rot13(char *str);
 
 #endif
